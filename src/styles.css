@@ -1357,6 +1357,75 @@ a {
     background: var(--gray-100);
 }
 
+/* Setup Steps */
+.setup-steps {
+    margin-bottom: 60px;
+}
+
+.setup-title {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+    color: var(--gray-600);
+}
+
+.setup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.setup-step {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.setup-num {
+    width: 36px;
+    height: 36px;
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.setup-content h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.setup-content p {
+    font-size: 13px;
+    color: var(--gray-500);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.setup-content p:last-child {
+    margin-bottom: 0;
+}
+
+.wallet-code {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    background: var(--gray-100);
+    border: 1px solid var(--gray-200);
+    padding: 10px 12px;
+    word-break: break-all;
+    color: var(--black);
+}
+
 /* ===== FOOTER ===== */
 .footer {
     padding: 24px 48px;

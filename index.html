@@ -402,14 +402,14 @@
                     <span>FOR PROJECTS</span>
                 </div>
                 <h2 class="matrix-title">Connect Your Token</h2>
-                <p class="connect-subtitle">Turn Pump.fun dev fees into automated buybacks</p>
+                <p class="connect-subtitle">Passive buyback system for Pump.fun projects</p>
                 
                 <div class="connect-flow">
                     <div class="flow-step">
                         <div class="flow-number">01</div>
                         <div class="flow-content">
-                            <h3>Dev Fees</h3>
-                            <p>Your Pump.fun developer fees flow into Digger MEV Pool</p>
+                            <h3>Redirect Dev Fees</h3>
+                            <p>Set your Pump.fun dev wallet to send fees to Digger Pool</p>
                         </div>
                     </div>
                     <div class="flow-arrow">→</div>
@@ -417,62 +417,94 @@
                         <div class="flow-number">02</div>
                         <div class="flow-content">
                             <h3>MEV Extraction</h3>
-                            <p>Bots extract value from gold markets (PAXG, XAUT) 24/7</p>
+                            <p>Your fees join the pool. Bots run on gold markets 24/7</p>
                         </div>
                     </div>
                     <div class="flow-arrow">→</div>
                     <div class="flow-step">
                         <div class="flow-number">03</div>
                         <div class="flow-content">
-                            <h3>Buyback</h3>
-                            <p>All MEV profits automatically buy YOUR token</p>
+                            <h3>Auto Buyback</h3>
+                            <p>MEV profits automatically buy YOUR token on market</p>
                         </div>
                     </div>
                     <div class="flow-arrow">→</div>
                     <div class="flow-step">
                         <div class="flow-number">04</div>
                         <div class="flow-content">
-                            <h3>Burn</h3>
-                            <p>Purchased tokens sent to burn address forever</p>
+                            <h3>Burn Forever</h3>
+                            <p>Purchased tokens sent to your burn address</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="connect-benefits">
                     <div class="benefit-card">
-                        <h4>Your Dev Fees + MEV = Constant Buy Pressure</h4>
-                        <p>Instead of sitting idle, your fees generate additional revenue through gold market MEV extraction</p>
+                        <h4>Your Dev Fees + Gold MEV = Constant Buy Pressure</h4>
+                        <p>Your Pump.fun fees don't sit idle — they generate additional revenue through gold market MEV, all going back to your token</p>
+                    </div>
+                </div>
+
+                <div class="setup-steps">
+                    <h3 class="setup-title">Setup (3 steps)</h3>
+                    <div class="setup-grid">
+                        <div class="setup-step">
+                            <div class="setup-num">1</div>
+                            <div class="setup-content">
+                                <h4>Pump.fun Settings</h4>
+                                <p>Go to your token's creator settings on Pump.fun</p>
+                            </div>
+                        </div>
+                        <div class="setup-step">
+                            <div class="setup-num">2</div>
+                            <div class="setup-content">
+                                <h4>Set Fee Recipient</h4>
+                                <p>Change dev fee wallet to Digger Pool:</p>
+                                <div class="wallet-code">Ea83WDWr6z743rzGmeuamzJs8oRH1B5KYzu8R7qxiaDU</div>
+                            </div>
+                        </div>
+                        <div class="setup-step">
+                            <div class="setup-num">3</div>
+                            <div class="setup-content">
+                                <h4>Register Token</h4>
+                                <p>Tell us your token mint and burn address:</p>
+                                <div class="code-snippet">
+                                    <code>POST api.digger.gold/v1/connect</code>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="connect-details">
                     <div class="detail-block">
-                        <h4>Requirements</h4>
+                        <h4>What You Need</h4>
                         <ul>
-                            <li>Pump.fun token with dev wallet</li>
-                            <li>Configured burn address</li>
-                            <li>Min 0.5 SOL monthly dev fees</li>
+                            <li>Pump.fun token (any stage)</li>
+                            <li>Access to your dev wallet settings</li>
+                            <li>Burn address for your token</li>
                         </ul>
                     </div>
                     <div class="detail-block">
-                        <h4>Fee Structure</h4>
+                        <h4>Revenue Split</h4>
                         <ul>
                             <li><strong>95%</strong> → Buyback & Burn your token</li>
                             <li><strong>5%</strong> → Protocol fee</li>
                         </ul>
                     </div>
                     <div class="detail-block">
-                        <h4>Integration</h4>
-                        <div class="code-snippet">
-                            <code>POST api.digger.gold/v1/connect</code>
-                        </div>
-                        <p>Full SDK and webhook support</p>
+                        <h4>Tracking</h4>
+                        <ul>
+                            <li>API webhook notifications</li>
+                            <li>Telegram bot alerts</li>
+                            <li>On-chain verification</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="connect-cta">
-                    <a href="docs.html#sdk" class="cta-btn">View Documentation</a>
-                    <a href="https://t.me/gold_digg_bot" class="cta-btn cta-secondary">Contact via Telegram</a>
+                    <a href="docs.html#sdk" class="cta-btn">Documentation</a>
+                    <a href="https://t.me/gold_digg_bot" class="cta-btn cta-secondary">Apply via Telegram</a>
                 </div>
             </div>
         </section>
