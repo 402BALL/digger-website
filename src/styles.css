@@ -463,6 +463,34 @@ a {
     gap: 12px;
 }
 
+.hero-ca {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+}
+
+.ca-label {
+    color: var(--gray-400);
+    font-weight: 500;
+}
+
+.ca-address {
+    color: var(--black);
+    background: var(--gray-100);
+    padding: 8px 14px;
+    border: 1px solid var(--gray-200);
+    transition: all 0.2s;
+    word-break: break-all;
+}
+
+.ca-address:hover {
+    background: var(--gray-200);
+    border-color: var(--gray-300);
+}
+
 .btn {
     padding: 12px 24px;
     font-family: var(--font-mono);
