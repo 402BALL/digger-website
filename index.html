@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digger Protocol — MEV Infrastructure for Precious Metals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-left">
+            <a href="/" class="nav-logo">
+                <div class="logo-box">
+                    <div class="logo-inner">
+                        <div class="logo-dot"></div>
+                    </div>
+                </div>
+                <span class="logo-text">DIGGER</span>
+            </a>
+        </div>
+        <div class="nav-center"></div>
+        <div class="nav-right">
+            <a href="#features" class="nav-link">FEATURES</a>
+            <a href="#architecture" class="nav-link">ARCHITECTURE</a>
+            <a href="#api" class="nav-link">API</a>
+            <a href="docs.html" class="nav-link">DOCS</a>
+            <a href="https://t.me/gold_digg_bot" target="_blank" class="nav-link nav-link-highlight">LAUNCH APP</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-bg">
+                <!-- Animated grid -->
+                <div class="hero-grid"></div>
+                
+                <!-- Floating code snippets -->
+                <div class="hero-code-float">
+                    <div class="float-code fc-1">const profit = await extractMEV()</div>
+                    <div class="float-code fc-2">PAXG.balanceOf(wallet)</div>
+                    <div class="float-code fc-3">burn(tokens, 0x000...dead)</div>
+                    <div class="float-code fc-4">flashbots.sendBundle()</div>
+                    <div class="float-code fc-5">jupiter.swap(SOL, DIGGER)</div>
+                    <div class="float-code fc-6">0x4580...bAf78</div>
+                </div>
+                
+                <!-- Geometric decorations -->
+                <div class="hero-shapes">
+                    <div class="hero-shape hs-1"></div>
+                    <div class="hero-shape hs-2"></div>
+                    <div class="hero-shape hs-3"></div>
+                    <div class="hero-shape hs-4"></div>
+                    <div class="hero-shape hs-5"></div>
+                </div>
+                
+                <!-- Animated lines -->
+                <svg class="hero-lines" viewBox="0 0 1200 800" preserveAspectRatio="none">
+                    <path class="hero-line hl-1" d="M0,400 Q300,350 600,400 T1200,400" />
+                    <path class="hero-line hl-2" d="M0,450 Q400,400 800,450 T1200,450" />
+                    <path class="hero-line hl-3" d="M0,350 Q200,300 500,350 T1200,350" />
+                </svg>
+                
+                <!-- Corner brackets -->
+                <div class="corner-bracket cb-tl"></div>
+                <div class="corner-bracket cb-tr"></div>
+                <div class="corner-bracket cb-bl"></div>
+                <div class="corner-bracket cb-br"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-label">
+                    <span class="label-dot"></span>
+                    <span>DIGGER PROTOCOL</span>
+                </div>
+                <h1>
+                    MEV Extraction from<br>
+                    Precious Metals Markets.<br>
+                    Automated Burns.
+                </h1>
+                <p class="hero-desc">
+                    Production-ready infrastructure for capturing arbitrage, 
+                    liquidations, and sandwich profits from tokenized gold and silver. All profits burn $DIGGER.
+                </p>
+                <div class="hero-buttons">
+                    <a href="docs.html" class="btn btn-primary">GET STARTED</a>
+                    <a href="#architecture" class="btn btn-secondary">VIEW ARCHITECTURE</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="split-layout">
+                <div class="split-left">
+                    <div class="content-block">
+                        <div class="block-label">
+                            <span class="label-dot"></span>
+                            <span>CORE FEATURES</span>
+                        </div>
+                        <h2>Key Capabilities</h2>
+                        <div class="feature-list">
+                            <p><span class="bullet"></span> <span class="feature-title">Gold Market MEV</span> — extract value from PAXG, XAUT, sXAU/sXAG</p>
+                            <p><span class="bullet"></span> <span class="feature-title">Automated Burns</span> — 100% of profits buy and burn $DIGGER</p>
+                            <p><span class="bullet"></span> <span class="feature-title">Cross-DEX Arbitrage</span> — Uniswap, Curve, SushiSwap, Balancer</p>
+                            <p><span class="bullet"></span> <span class="feature-title">Liquidation Capture</span> — AAVE, Compound gold collateral positions</p>
+                            <p><span class="bullet"></span> <span class="feature-title">Flashbots Integration</span> — atomic execution via private mempools</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="block-label">
+                            <span class="label-dot"></span>
+                            <span>ARCHITECTURE</span>
+                        </div>
+                        <h2>Three-Layer Stack</h2>
+                        <div class="layer-list">
+                            <div class="layer-item">
+                                <p class="layer-title">Layer 1: MEV Extraction</p>
+                                <p class="layer-desc">Ethereum + L2 bots monitoring gold/silver DEXs</p>
+                                <p class="layer-sub">arbitrage-bot / sandwich-bot / liquidation-bot</p>
+                            </div>
+                            <div class="layer-item">
+                                <p class="layer-title">Layer 2: Profit Aggregation</p>
+                                <p class="layer-desc">Consolidation of ETH/USDC profits</p>
+                                <p class="layer-sub">profit-router / treasury-wallet / bridge-controller</p>
+                            </div>
+                            <div class="layer-item">
+                                <p class="layer-title">Layer 3: Burn Mechanism</p>
+                                <p class="layer-desc">Solana buy + burn execution</p>
+                                <p class="layer-sub">jupiter-swap / burn-executor / event-emitter</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="architecture" class="content-block">
+                        <div class="block-label">
+                            <span class="label-dot"></span>
+                            <span>DATA FLOW</span>
+                        </div>
+                        <h2>Execution Path</h2>
+                        <div class="flow-list">
+                            <div class="flow-item">
+                                <span class="flow-num">01</span>
+                                <div>
+                                    <h3>Price Monitor</h3>
+                                    <p>WebSocket feeds from Uniswap, Curve, CEX APIs</p>
+                                </div>
+                            </div>
+                            <div class="flow-item">
+                                <span class="flow-num">02</span>
+                                <div>
+                                    <h3>Opportunity Detection</h3>
+                                    <p>Compare prices, calculate profit after gas</p>
+                                </div>
+                            </div>
+                            <div class="flow-item">
+                                <span class="flow-num">03</span>
+                                <div>
+                                    <h3>Bundle Creation</h3>
+                                    <p>Atomic transaction via Flashbots relay</p>
+                                </div>
+                            </div>
+                            <div class="flow-item">
+                                <span class="flow-num">04</span>
+                                <div>
+                                    <h3>Profit Extraction</h3>
+                                    <p>Execute trade, collect profit in ETH/USDC</p>
+                                </div>
+                            </div>
+                            <div class="flow-item">
+                                <span class="flow-num">05</span>
+                                <div>
+                                    <h3>Bridge & Burn</h3>
+                                    <p>Wormhole to Solana, Jupiter swap, burn $DIGGER</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="split-right">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <div class="dot dot-active"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <span class="terminal-title">TERMINAL / IDE</span>
+                        </div>
+                        <div class="terminal-tabs">
+                            <div class="tab tab-active">01 SOURCE CODE</div>
+                            <div class="tab">02 CONFIG</div>
+                            <div class="tab">03 TERMINAL</div>
+                        </div>
+                        <div class="terminal-content">
+                            <div class="file-explorer">
+                                <div class="explorer-header">
+                                    <span class="arrow">&#9660;</span>
+                                    <span class="explorer-title">EXPLORER</span>
+                                </div>
+                                <div class="explorer-tree">
+                <div class="tree-item tree-folder open">
+                    <span class="arrow">&#9660;</span>
+                    <span class="folder-name">digger-protocol</span>
+                </div>
+                                    <div class="tree-children">
+                                        <div class="tree-item tree-folder">
+                                            <span class="arrow">&#9654;</span>
+                                            <span>bots/</span>
+                                        </div>
+                                        <div class="tree-item tree-folder">
+                                            <span class="arrow">&#9654;</span>
+                                            <span>contracts/</span>
+                                        </div>
+                                        <div class="tree-item tree-folder">
+                                            <span class="arrow">&#9654;</span>
+                                            <span>bridge/</span>
+                                        </div>
+                                        <div class="tree-item tree-folder">
+                                            <span class="arrow">&#9654;</span>
+                                            <span>burn-executor/</span>
+                                        </div>
+                                        <div class="tree-item tree-file">
+                                            <span class="file-icon">&#9633;</span>
+                                            <span>package.json</span>
+                                        </div>
+                                        <div class="tree-item tree-file">
+                                            <span class="file-icon">&#9633;</span>
+                                            <span>README.md</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="code-block">
+                                <div class="code-header">bots/arbitrage.ts</div>
+                                <div class="code-content">
+                                    <div class="code-line"><span class="ln"> 1</span>  <span class="c-comment">// PAXG arbitrage between Uniswap and Curve</span></div>
+                                    <div class="code-line"><span class="ln"> 2</span>  <span class="c-keyword">const</span> <span class="c-var">opportunity</span> <span class="c-op">=</span> <span class="c-keyword">await</span> <span class="c-fn">findArbitrage</span>({</div>
+                                    <div class="code-line"><span class="ln"> 3</span>    <span class="c-prop">token:</span> <span class="c-string">'PAXG'</span>,</div>
+                                    <div class="code-line"><span class="ln"> 4</span>    <span class="c-prop">dexA:</span> <span class="c-string">'uniswap_v3'</span>,</div>
+                                    <div class="code-line"><span class="ln"> 5</span>    <span class="c-prop">dexB:</span> <span class="c-string">'curve'</span>,</div>
+                                    <div class="code-line"><span class="ln"> 6</span>    <span class="c-prop">minProfitUsd:</span> <span class="c-num">50</span></div>
+                                    <div class="code-line"><span class="ln"> 7</span>  });</div>
+                                    <div class="code-line"><span class="ln"> 8</span></div>
+                                    <div class="code-line"><span class="ln"> 9</span>  <span class="c-keyword">if</span> (opportunity) {</div>
+                                    <div class="code-line"><span class="ln">10</span>    <span class="c-keyword">const</span> <span class="c-var">bundle</span> <span class="c-op">=</span> <span class="c-fn">createFlashbotsBundle</span>([</div>
+                                    <div class="code-line"><span class="ln">11</span>      <span class="c-var">opportunity</span>.<span class="c-prop">buyTx</span>,</div>
+                                    <div class="code-line"><span class="ln">12</span>      <span class="c-var">opportunity</span>.<span class="c-prop">sellTx</span></div>
+                                    <div class="code-line"><span class="ln">13</span>    ]);</div>
+                                    <div class="code-line"><span class="ln">14</span></div>
+                                    <div class="code-line"><span class="ln">15</span>    <span class="c-keyword">await</span> <span class="c-var">flashbotsProvider</span>.<span class="c-fn">sendBundle</span>(<span class="c-var">bundle</span>);</div>
+                                    <div class="code-line"><span class="ln">16</span>  }</div>
+                                </div>
+                            </div>
+
+                            <div class="code-block">
+                                <div class="code-header">burn-executor/burn.ts</div>
+                                <div class="code-content">
+                                    <div class="code-line"><span class="ln"> 1</span>  <span class="c-comment">// Convert ETH profit to SOL and burn DIGGER</span></div>
+                                    <div class="code-line"><span class="ln"> 2</span>  <span class="c-keyword">const</span> <span class="c-var">profitSol</span> <span class="c-op">=</span> <span class="c-keyword">await</span> <span class="c-fn">bridgeToSolana</span>(<span class="c-var">profitEth</span>);</div>
+                                    <div class="code-line"><span class="ln"> 3</span></div>
+                                    <div class="code-line"><span class="ln"> 4</span>  <span class="c-comment">// Buy DIGGER via Jupiter aggregator</span></div>
+                                    <div class="code-line"><span class="ln"> 5</span>  <span class="c-keyword">const</span> <span class="c-var">diggerAmount</span> <span class="c-op">=</span> <span class="c-keyword">await</span> <span class="c-var">jupiter</span>.<span class="c-fn">swap</span>({</div>
+                                    <div class="code-line"><span class="ln"> 6</span>    <span class="c-prop">inputMint:</span> <span class="c-var">SOL_MINT</span>,</div>
+                                    <div class="code-line"><span class="ln"> 7</span>    <span class="c-prop">outputMint:</span> <span class="c-var">DIGGER_MINT</span>,</div>
+                                    <div class="code-line"><span class="ln"> 8</span>    <span class="c-prop">amount:</span> <span class="c-var">profitSol</span></div>
+                                    <div class="code-line"><span class="ln"> 9</span>  });</div>
+                                    <div class="code-line"><span class="ln">10</span></div>
+                <div class="code-line"><span class="ln">11</span>  <span class="c-comment">// Burn tokens forever</span></div>
+                <div class="code-line"><span class="ln">12</span>  <span class="c-keyword">await</span> <span class="c-fn">transfer</span>(<span class="c-var">diggerAmount</span>, <span class="c-var">BURN_ADDRESS</span>);</div>
+                <div class="code-line"><span class="ln">13</span>  <span class="c-fn">emitBurnEvent</span>(<span class="c-var">diggerAmount</span>, <span class="c-var">txHash</span>);</div>
+                                </div>
+                            </div>
+
+                            <div class="code-block terminal-output">
+                                <div class="code-header">TERMINAL OUTPUT</div>
+                                <div class="code-content">
+                                    <div class="code-line"><span class="c-accent">$</span> npm run start:all</div>
+                                    <div class="code-line"><span class="c-muted"># Starting Digger MEV infrastructure...</span></div>
+                                    <div class="code-line"></div>
+                                    <div class="code-line"><span class="c-muted">[arbitrage]</span> Monitoring PAXG on Uniswap V3...</div>
+                                    <div class="code-line"><span class="c-muted">[arbitrage]</span> Monitoring PAXG on Curve...</div>
+                                    <div class="code-line"><span class="c-muted">[arbitrage]</span> Monitoring XAUT on Balancer...</div>
+                                    <div class="code-line"><span class="c-muted">[sandwich]</span> Mempool listener active</div>
+                                    <div class="code-line"><span class="c-muted">[liquidation]</span> AAVE health factor monitor started</div>
+                                    <div class="code-line"><span class="c-muted">[bridge]</span> Wormhole relayer connected</div>
+                                    <div class="code-line"><span class="c-muted">[burn]</span> Jupiter swap ready</div>
+                                    <div class="code-line"></div>
+                                    <div class="code-line"><span class="c-success">OK</span> All services operational</div>
+                                    <div class="code-line"><span class="c-accent">--</span> Waiting for opportunities...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="api" class="matrix-section">
+            <div class="matrix-bg">
+                <div class="grid-lines"></div>
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                    <div class="shape shape-4"></div>
+                </div>
+                <div class="code-rain">
+                    <span>0x45804880De22913dAFE09f4980848ECE6EcbAf78</span>
+                    <span>arbitrage.execute()</span>
+                    <span>burn(amount, BURN_ADDRESS)</span>
+                    <span>flashbots.sendBundle()</span>
+                    <span>jupiter.swap({inputMint, outputMint})</span>
+                    <span>PAXG/ETH 0.14% spread</span>
+                    <span>liquidation.capture()</span>
+                    <span>wormhole.bridge(SOL)</span>
+                </div>
+            </div>
+            <div class="section-inner">
+                <div class="block-label">
+                    <span class="label-dot"></span>
+                    <span>FEATURE MATRIX</span>
+                </div>
+                <h2 class="matrix-title">What You Get</h2>
+                <div class="matrix-grid">
+                    <a href="docs.html#api-events" class="matrix-card">
+                        <h3>MEV STRATEGIES</h3>
+                        <p class="matrix-desc">Arbitrage / Sandwich / Liquidations</p>
+                        <p class="matrix-sub">Multi-DEX gold market coverage</p>
+                        <span class="card-arrow">-></span>
+                    </a>
+                    <a href="docs.html#api-token" class="matrix-card">
+                        <h3>SUPPORTED TOKENS</h3>
+                        <p class="matrix-desc">PAXG / XAUT / sXAU / sXAG</p>
+                        <p class="matrix-sub">Ethereum + L2 deployments</p>
+                        <span class="card-arrow">-></span>
+                    </a>
+                    <a href="docs.html#introduction" class="matrix-card">
+                        <h3>EXECUTION</h3>
+                        <p class="matrix-desc">Flashbots / MEV-Boost / Jito</p>
+                        <p class="matrix-sub">Private mempool transactions</p>
+                        <span class="card-arrow">-></span>
+                    </a>
+                    <a href="docs.html#api-burns" class="matrix-card">
+                        <h3>BURN MECHANISM</h3>
+                        <p class="matrix-desc">Automated / Verifiable / Permanent</p>
+                        <p class="matrix-sub">On-chain audit trail</p>
+                        <span class="card-arrow">-></span>
+                    </a>
+                    <a href="docs.html#api-overview" class="matrix-card">
+                        <h3>API ACCESS</h3>
+                        <p class="matrix-desc">REST / WebSocket / SDK</p>
+                        <p class="matrix-sub">Real-time event streaming</p>
+                        <span class="card-arrow">-></span>
+                    </a>
+                    <a href="docs.html#ws-events" class="matrix-card">
+                        <h3>MONITORING</h3>
+                        <p class="matrix-desc">Dashboard / Alerts / Logs</p>
+                        <p class="matrix-sub">Telegram bot integration</p>
+                        <span class="card-arrow">-></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="section-inner">
+                <div class="block-label">
+                    <span class="label-dot"></span>
+                    <span>PROTOCOL METRICS</span>
+                </div>
+                <h2 class="matrix-title">Current Status</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">—</div>
+                        <div class="stat-label">Total Burned</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">—</div>
+                        <div class="stat-label">MEV Extracted</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">—</div>
+                        <div class="stat-label">Active Strategies</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">—</div>
+                        <div class="stat-label">Markets Monitored</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="token-section">
+            <div class="section-inner">
+                <div class="block-label">
+                    <span class="label-dot"></span>
+                    <span>TOKEN</span>
+                </div>
+                <h2 class="matrix-title">$DIGGER</h2>
+                <div class="token-grid">
+                    <div class="token-info">
+                        <div class="token-row">
+                            <span class="token-key">Name</span>
+                            <span class="token-val">DIGGER</span>
+                        </div>
+                        <div class="token-row">
+                            <span class="token-key">Network</span>
+                            <span class="token-val">Solana</span>
+                        </div>
+                        <div class="token-row">
+                            <span class="token-key">Initial Supply</span>
+                            <span class="token-val">1,000,000,000</span>
+                        </div>
+                        <div class="token-row">
+                            <span class="token-key">Contract</span>
+                            <span class="token-val">—</span>
+                        </div>
+                        <div class="token-row">
+                            <span class="token-key">Launch</span>
+                            <span class="token-val">Pump.fun</span>
+                        </div>
+                    </div>
+                    
+                    <div class="wallets-info">
+                        <h3>Public Wallets</h3>
+                        <div class="wallet-row">
+                            <span class="wallet-label">Burn Wallet (Solana)</span>
+                            <a href="https://solscan.io/account/Ea83WDWr6z743rzGmeuamzJs8oRH1B5KYzu8R7qxiaDU" target="_blank" class="wallet-address">
+                                Ea83WDWr6z743rzGmeuamzJs8oRH1B5KYzu8R7qxiaDU
+                            </a>
+                            <span class="wallet-desc">Buyback and burn operations</span>
+                        </div>
+                        <div class="wallet-row">
+                            <span class="wallet-label">MEV Wallet (Ethereum)</span>
+                            <a href="https://etherscan.io/address/0xd9f638448e683b999706892809a80b67659248ef" target="_blank" class="wallet-address">
+                                0xd9f638448e683b999706892809a80b67659248ef
+                            </a>
+                            <span class="wallet-desc">MEV extraction profits</span>
+                        </div>
+                    </div>
+                    <div class="token-desc">
+                        <h3>Deflationary Model</h3>
+                        <p>
+                            DIGGER has no inflation. Supply can only decrease through burns.
+                            The protocol creates constant buy pressure using 100% of MEV profits
+                            for token purchases, followed by permanent destruction.
+                        </p>
+                        <p>
+                            All burns are executed on-chain and verifiable via Solana Explorer.
+                            The burn address is a null address with no private key.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>2026 DIGGER PROTOCOL. OPEN SOURCE.</p>
+            <div class="footer-links">
+                <a href="docs.html">DOCS</a>
+                <a href="https://x.com/i/communities/2016516464254058868/" target="_blank">TWITTER</a>
+                <a href="https://t.me/gold_digg_bot" target="_blank">TELEGRAM</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/app.js"></script>
+</body>
+</html>
